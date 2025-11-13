@@ -14,7 +14,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza verticalmente */
+  justify-content: space-evenly; /* Centraliza verticalmente */
   align-items: center;
   text-align: center;
   overflow: hidden; /* Evita rolagem */
@@ -26,6 +26,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  padding-top: 55px;
 }
 
 header h1 {
@@ -96,12 +97,13 @@ footer {
   font-size: 0.9rem;
   color: #6b705c;
   margin-top: 20px;
+  line-height: 25px;
 }
 
 /* ========== RESPONSIVIDADE ========== */
 @media screen and (max-width: 768px) {
   header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   header p {
@@ -119,17 +121,18 @@ footer {
   }
 
   footer {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   header h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
 
   header p {
-    font-size: 0.95rem;
+    width: 70%;
+    font-size: 1.1rem;
   }
 
   .boxes-card a {
@@ -137,11 +140,12 @@ footer {
   }
 
   .boxes-card a p {
-    font-size: 0.95rem;
+    font-size: 0.90rem;
   }
 
   footer {
-    font-size: 0.75rem;
+      font-size: 0.85rem;
+      
   }
 }
 
