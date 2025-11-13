@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;500&display=swap');
+
+/* ========== RESET GLOBAL ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url('fundo4.jpeg') no-repeat center center / cover;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* Centraliza verticalmente */
+  align-items: center;
+  text-align: center;
+}
+
 section {
   padding: 40px 20px;
   max-width: 1000px;
@@ -60,4 +80,49 @@ button {
 
 button:hover {
   background-color: #4c3d73;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  color: #5f4b8b;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.payment-buttons button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  background: transparent;
+  color: #999;
+  font-size: 0.9rem;
+  margin-top: 10px;
 }
