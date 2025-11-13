@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #faf9f8;
+  background-image: url(/img/fundo4.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #000;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px 20px 0;
+  gap: 40px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #7C8C5E;
+  font-family: "Parisienne", cursive;
+  font-weight: 100;
+}
+
+header p {
+  font-size: 1.4rem;
+  color: #000000;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-family: "Parisienne", cursive;
+  line-height: 30px;
+}
+
+#content-options {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#content-options h2 {
+  font-size: 1.1rem;
+  padding-bottom: 30px;
+  font-family: "Parisienne", cursive;
+  padding-top: 30px;
+  line-height: 1.4px;
+  
+}
+
+.boxes {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.boxes-card a {
+  width: 100% ;
+  display: flex;
+  border: 1px solid #7C8C5E;
+  flex-direction: column;
+  background-color: #C7D6A8;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: 8%;
+}
+
+.boxes-card a img {
+  width: 40px;
+
+}
+
+.boxes-card a p {
+  color: black;
+  font-size: 0.92rem;
+  letter-spacing: 0.5px;  
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b705c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Parisienne", cursive;
+  padding-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  color: #5f4b8b;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.payment-buttons button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  background: transparent;
+  color: #999;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}

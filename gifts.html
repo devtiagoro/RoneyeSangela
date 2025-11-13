@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gifts.css">
+    <title>Roney & Sangela | Lista de Presentes</title>
+</head>
+<body>
+    <section id="gifts">
+    <h2 style="text-align:center; color:#5f4b8b;">Lista de Presentes</h2>
+    <p style="text-align:center; color:#666;">
+      Escolha um presente simbólico e contribua com o valor correspondente.  
+      Tudo será revertido para o nosso novo lar e nossos sonhos juntos.
+    </p>
+
+    <div class="gift-grid">
+      
+      <div class="gift-box">
+        <img src="https://via.placeholder.com/300x200" alt="Cafeteira dos sonhos">
+        <h3>Cafeteira dos Sonhos ☕️</h3>
+        <p>Para começarmos nossos dias com o aroma do amor.</p>
+        <p class="price">R$ 250</p>
+        <button onclick="openModal('Cafeteira dos Sonhos', 250)">Presentear</button>
+      </div>
+
+      <div class="gift-box">
+        <img src="https://via.placeholder.com/300x200" alt="Jantar a dois">
+        <h3>Jantar a Dois 🍷</h3>
+        <p>Um brinde à vida, ao amor e à parceria.</p>
+        <p class="price">R$ 180</p>
+        <button onclick="openModal('Jantar a Dois', 180)">Presentear</button>
+      </div>
+
+      <div class="gift-box">
+        <img src="https://via.placeholder.com/300x200" alt="Viagem de Lua de Mel">
+        <h3>Viagem de Lua de Mel 🌴</h3>
+        <p>Ajude-nos a colecionar memórias que nunca terão preço.</p>
+        <p class="price">R$ 500</p>
+        <button onclick="openModal('Viagem de Lua de Mel', 500)">Presentear</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="paymentModal">
+    <div class="modal-content">
+      <h2>🎁 Você escolheu presentear com amor!</h2>
+      <p id="selectedGift">Presente: </p>
+      <p>Escolha a forma de contribuição e finalize sua homenagem.</p>
+      <div class="payment-buttons">
+        <button>Gerar Pix</button>
+        <button>Pagar com cartão</button>
+        <button>Contribuir por outro canal</button>
+      </div>
+      <button class="close-btn" onclick="closeModal()">Voltar à lista de presentes</button>
+    </div>
+  </div>
+  <footer>
+    Feito com amor, por amor e para o amor. 💜<br>
+    <strong>Roney & Sangela</strong>
+  </footer>
+
+  <script>
+    const modal = document.getElementById('paymentModal');
+    const selectedGift = document.getElementById('selectedGift');
+
+    function openModal(gift, value) {
+      selectedGift.textContent = `Presente: ${gift} — R$ ${value}`;
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    window.onclick = function(e) {
+      if (e.target == modal) closeModal();
+    }
+  </script>
+</body>
+</html>
