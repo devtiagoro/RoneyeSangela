@@ -21,12 +21,10 @@
       </p>
 
       <div class="gift-grid">
-        <div class="gift-box">
-          <div class="imagem">
+        <div class="gift-box">         
           <img
             src="img/jogoloucas.jpg"
             alt="Jogo de Louças"
-          /></div>
           <h3>Lava Louças Elegante</h3>
           <p>Para compor a mesa dos noivos em ocasiões especiais e no dia a dia.</p>
           <p class="price">R$ 523,00</p>
@@ -150,42 +148,51 @@
       </div>
     </section>
 
-    <div class="modal" id="paymentModal">
-      <div class="modal-content">
-        <h2>🎁 Você escolheu presentear com amor!</h2>
-        <p id="selectedGift">Presente:</p>
-        <p>Escolha a forma de contribuição e finalize sua homenagem.</p>
-        <div class="payment-buttons">
-          <button>Gerar Pix</button>
-          <button>Pagar com cartão</button>
-          <button>Contribuir por outro canal</button>
-        </div>
-        <button class="close-btn" onclick="closeModal()">
-          Voltar à lista de presentes
-        </button>
-      </div>
-    </div>
+  <script>
+    const modal = document.getElementById("paymentModal");
+    const selectedGift = document.getElementById("selectedGift");
 
-    <footer>
-      Copywhite © 2025 | Developed by <a href="https://devtiagoro.github.io/meusite/" target="_blank">Tiago Rodrigues</a>
-    </footer>
+    const pixBtn = document.getElementById("pixBtn");
+    const cardBtn = document.getElementById("cardBtn");
+    const otherBtn = document.getElementById("otherBtn");
 
-    <script>
-      const modal = document.getElementById("paymentModal");
-      const selectedGift = document.getElementById("selectedGift");
+    // Mapeamento dos links de pagamento por presente
+    const linksPagamento = {
+      "Lava Louças Elegante": "https://link.picpay.com/p/176314139969176717f1c4f",
+      "Jogo de Talheres": "https://www.picpay.com/pagamento/jogodetalheres",
+      "Kit de Taças": "https://www.picpay.com/pagamento/kitdetacas",
+      "Jogo de Panelas": "https://www.picpay.com/pagamento/jogodepanelas",
+      "Jogo de Chá": "https://www.picpay.com/pagamento/jogodecha",
+      "Viagem Inesquecível": "https://www.picpay.com/pagamento/viagem",
+      "Jogo de Cama": "https://www.picpay.com/pagamento/jogodecama",
+      "Quadros Decorativos": "https://www.picpay.com/pagamento/quadros",
+      "Churrasqueira Elétrica": "https://www.picpay.com/pagamento/churrasqueira",
+      "Malas de Viagem": "https://www.picpay.com/pagamento/malas",
+      "Kit de Jardinagem": "https://www.picpay.com/pagamento/jardinagem",
+      "Tábua de Corte Inox": "https://www.picpay.com/pagamento/tabua",
+      "Jogo de Facas": "https://www.picpay.com/pagamento/facas",
+      "Liquidificador": "https://www.picpay.com/pagamento/liquidificador",
+      "Sanduicheira": "https://www.picpay.com/pagamento/sanduicheira",
+      "Geladeira Moderna": "https://www.picpay.com/pagamento/geladeira"
+    };
 
-      function openModal(gift, value) {
-        selectedGift.textContent = `Presente: ${gift} — R$ ${value}`;
-        modal.style.display = "flex";
-      }
+    function openModal(gift, value) {
+      selectedGift.textContent = `Presente: ${gift} — R$ ${value.toFixed(2)}`;
+      modal.style.display = "flex";
 
-      function closeModal() {
-        modal.style.display = "none";
-      }
+      // Atualiza os botões de pagamento
+      pixBtn.onclick = () => window.open(linksPagamento[gift] + "?method=pix", "_blank");
+      cardBtn.onclick = () => window.open(linksPagamento[gift] + "?method=card", "_blank");
+      otherBtn.onclick = () => window.open(linksPagamento[gift] + "?method=other", "_blank");
+    }
 
-      window.onclick = function (e) {
-        if (e.target == modal) closeModal();
-      };
-    </script>
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(e) {
+      if (e.target == modal) closeModal();
+    }
+  </script>
   </body>
 </html>
