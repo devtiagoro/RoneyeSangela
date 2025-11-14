@@ -148,6 +148,25 @@
       </div>
     </section>
 
+     <!-- Modal de pagamento -->
+  <div class="modal" id="paymentModal">
+    <div class="modal-content">
+      <h2>🎁 Você escolheu presentear com amor!</h2>
+      <p id="selectedGift">Presente:</p>
+      <p>Escolha a forma de contribuição e finalize sua homenagem.</p>
+      <div class="payment-buttons">
+        <button id="pixBtn">Gerar Pix</button>
+        <button id="cardBtn">Pagar com cartão</button>
+        <button id="otherBtn">Contribuir por outro canal</button>
+      </div>
+      <button class="close-btn" onclick="closeModal()">Voltar à lista de presentes</button>
+    </div>
+  </div>
+
+  <footer>
+    Copywhite © 2025 | Developed by <a href="https://devtiagoro.github.io/meusite/" target="_blank">Tiago Rodrigues</a>
+  </footer>
+
   <script>
     const modal = document.getElementById("paymentModal");
     const selectedGift = document.getElementById("selectedGift");
