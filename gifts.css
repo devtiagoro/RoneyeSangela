@@ -24,6 +24,23 @@ section {
   margin: 0 auto;
 }
 
+#gifts h2 {
+  text-align: center; 
+  color: #7C8C5E;
+  font-size: 2.8rem;
+  font-weight: 100;
+  font-family: "Parisienne", cursive;
+  margin-bottom: 25px; 
+}
+
+.subtitle {
+  text-align: center;
+}
+
+#gifts span {
+  font-weight: bold;
+}
+
 .gift-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -33,11 +50,12 @@ section {
 
 .gift-box {
   background-color: #fff;
-  border-radius: 16px;
+  border-radius: 16px; 
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 24px;
   text-align: center;
   transition: transform 0.2s ease;
+  border: 1px solid #7C8C5E;
 }
 
 .gift-box:hover {
@@ -46,13 +64,14 @@ section {
 
 .gift-box img {
   width: 100%;
+  aspect-ratio: 1/1;
   border-radius: 12px;
   margin-bottom: 16px;
 }
 
 .gift-box h3 {
   margin: 8px 0;
-  color: #5f4b8b;
+  color: #7C8C5E;
 }
 
 .gift-box p {
@@ -68,7 +87,7 @@ section {
 }
 
 button {
-  background-color: #5f4b8b;
+  background-color: #7C8C5E;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -79,7 +98,9 @@ button {
 }
 
 button:hover {
-  background-color: #4c3d73;
+  background-color: #C7D6A8;
+  color: black;
+  border: 1px solid #7c8c5e;
 }
 
 /* Modal */
@@ -105,7 +126,7 @@ button:hover {
 }
 
 .modal-content h2 {
-  color: #5f4b8b;
+  color: #7C8C5E;
   margin-bottom: 10px;
 }
 
